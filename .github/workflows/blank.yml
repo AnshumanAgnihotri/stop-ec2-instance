@@ -1,3 +1,4 @@
+
 name: Stop EC2 Instance
 
 on:
@@ -13,7 +14,9 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-                   aws-region:${{ secrets.aws_region}}
+        aws-region: us-east-1b
+      
+
     - name: Stop EC2 instance
       run: |
         INSTANCE_ID="i-01f052febf8cbe61b"
